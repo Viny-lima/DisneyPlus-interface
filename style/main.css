@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: #141414;
+    --cor2: #E50914;
+}
+
+*{
+    /*Resetando o Css*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Elementos bases*/
+
+body {
+    background: var(--cor1);
+    color: white;
+}
+
+body::-webkit-scrollbar{
+    opacity: 100%;
+    width: 0%;
+}
+
+header .container {
+    display: flex;
+    /* Por padrão -> flex-direction: row;*/
+    
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+header .logo {
+    color: var(--cor2);
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/*Filme Principal*/
+
+.filme-principal #logo-capa {
+    width: 50%;
+}
+
+main .filme-principal{
+    font-size: 55%;
+    background: linear-gradient(rgba(0,0, 0, .50), rgba(0,0,0, .30) 100%),url('../src/capa-principal.jpg');
+
+    width: 100%; 
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    margin: auto;
+}
+
+.filme-principal .describe {
+    margin-top: 3%;
+}
+
+/*Botões*/
+
+.filme-principal .botoes {
+    margin-top: 10%;
+    padding: 10px;
+}
+
+.filme-principal .botao {
+    background-color: #141414c7;
+    color: white;
+    border: none;
+    padding: 7px;
+    margin: 2px;
+    border-radius: 3px;
+
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.filme-principal .botao:hover {
+    background-color: white;
+    color: #141414;
+}
+
+.filme-principal .botao i {
+    margin-right: 5px;
+}
+
+/*WRAPPER => Envelope => container*/
+
+.container {
+    margin-left: 3%;
+}
+
+.filme-principal .container {
+    width: 60%;
+}
+
+/*Carrosel de filmes*/
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
+
+
+.box-filme{
+    display: block;
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.434);
+}
+
+.item {
+    width: 200px;
+}
