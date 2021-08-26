@@ -26,6 +26,7 @@ body {
     background: var(--cor5);
     color: var(--cor3);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 0;
 }
 
 body::-webkit-scrollbar{
@@ -50,8 +51,7 @@ header .container {
 
     top: 0;
     width: 100%;
-    position: fixed;
-    z-index: 0;
+    z-index: 1;
 }
 
 header nav a {
@@ -60,11 +60,17 @@ header nav a {
     margin: 10px;
 }
 
+nav #res {
+    display: none;
+    color: var(--cor3);
+    text-decoration: none;
+}
+
 /*Filmes em destaque (Caps)*/
 .filme-principal {
     display: flex;
     align-self: auto;
-    margin-top: 130px;
+    margin-top: 50px;
 }
 
 
@@ -112,7 +118,7 @@ header nav a {
     width: 70%;
     height: 80%;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .pop-up .container {
