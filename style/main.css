@@ -1,22 +1,31 @@
 @charset "UTF-8";
 
-:root{
-    --cor1: #141414;
-    --cor2: #E50914;
+/*Formatar css*/
+
+:root {
+    --cor1: #010b1c;
+    --cor2: #0063E5;
+    --cor3: #F9F9F9;
+    --cor4: #616261;
+    --cor5: #000e24; 
+
+    --capa-tam: 800px;
+    --lines-tam: 300px;
 }
 
+/*Configuração Geral*/
+
 *{
-    /*Resetando o Css*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*Elementos bases*/
-
 body {
-    background: var(--cor1);
-    color: white;
+    height: 1500px;
+    background: var(--cor5);
+    color: var(--cor3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body::-webkit-scrollbar{
@@ -24,108 +33,111 @@ body::-webkit-scrollbar{
     width: 0%;
 }
 
-header .container {
-    display: flex;
-    /* Por padrão -> flex-direction: row;*/
-    
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    justify-content: space-between;
-
-    padding: 10px;
-}
+/*Configurando o Header e a barra de navegaçaõ*/
 
 header .logo {
-    color: var(--cor2);
-    font-weight: bolder;
-    font-size: 35px;
-}
-
-header nav a {
-    text-decoration: none;
-    color: #AAA;
+    width: 100px;
     margin-right: 10px;
 }
 
-header nav a:hover {
-    color: #fff;
-}
-
-/*Filme Principal*/
-
-.filme-principal #logo-capa {
-    width: 50%;
-}
-
-main .filme-principal{
-    font-size: 55%;
-    background: linear-gradient(rgba(0,0, 0, .50), rgba(0,0,0, .30) 100%),url('../src/capa-principal.jpg');
-
-    width: 100%; 
-    height: 400px;
-    background-size: cover;
-
+header .container {
+    
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; 
-    margin: auto;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--cor1);
+    box-shadow: 10px 0px 2000px #6077f875;
+
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
 }
 
-.filme-principal .describe {
-    margin-top: 3%;
+header nav a {
+    color: var(--cor3);
+    text-decoration: none;
+    margin: 10px;
 }
 
-/*Botões*/
-
-.filme-principal .botoes {
-    margin-top: 10%;
-    padding: 10px;
-}
-
-.filme-principal .botao {
-    background-color: #141414c7;
-    color: white;
-    border: none;
-    padding: 7px;
-    margin: 2px;
-    border-radius: 3px;
-
-    cursor: pointer;
-    transition: .5s ease all;
-}
-
-.filme-principal .botao:hover {
-    background-color: white;
-    color: #141414;
-}
-
-.filme-principal .botao i {
-    margin-right: 5px;
-}
-
-/*WRAPPER => Envelope => container*/
-
-.container {
-    margin-left: 3%;
-}
-
-.filme-principal .container {
-    width: 60%;
-}
-
-/*Carrosel de filmes*/
-
-.carrosel-filmes {
-    margin-top: 5px;
+/*Filmes em destaque (Caps)*/
+.filme-principal {
+    display: flex;
+    align-self: auto;
+    margin-top: 130px;
 }
 
 
-.box-filme{
+.filme-principal .box-capa{
+    width: 100%;
+    height: 100%;
     display: block;
-    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.434);
 }
 
-.item {
-    width: 200px;
+.filme-principal .capa {
+    width: var(--capa-tam);
+    border: none;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.412);
+    cursor: pointer;
+}
+
+/*Outros filmes linha 1*/
+.outras-lines {
+    margin-top: 30px;
+}
+
+.outras-lines p {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 150%;
+    margin: 10px;
+    font-weight: 900;
+
+}
+
+.outras-lines .item{
+    margin-top: 20PX;
+    width: var(--lines-tam);
+    border: none;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.412);
+    cursor: pointer;
+}
+
+/*Pop-up de reprodução de vídeos*/
+
+.pop-up {
+    display: none;
+    position: fixed;
+    margin: 5% 15%;
+    width: 70%;
+    height: 80%;
+    top: 0;
+    z-index: 1;
+}
+
+.pop-up .container {
+    display: flex;
+    height: 100%;
+    background-color: #010b1c;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    box-shadow: 0px 0px 500px rgb(2, 15, 114);
+}
+
+.pop-up .play {
+    width: 125%;
+    height: 125%;
+
+}
+
+.pop-up button{
+    background-color: var(--cor2);
+    border: none;
+    color: var(--cor3);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    width: 25px;
+    box-shadow: 0px 0px 10px var(--cor2);
 }

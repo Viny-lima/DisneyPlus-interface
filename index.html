@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Viny</title>
+    <!--Folhas de Estilo-->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <!--Folhas do OWL-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <img src="src/logo-disneyplus.png" alt="logo Disney" class="logo">
+            <nav>
+                <a href="">
+                    <i class="fas fa-home"></i>
+                    INÍCIO
+                </a>
+                <a href="">
+                    <i class="fas fa-search"></i>
+                    PESQUISA
+                </a>
+                <a href="">
+                    <i class="fas fa-plus"></i>
+                    MINHA LISTA
+                </a>
+                <a href="">
+                    <i class="fas fa-star"></i>
+                    ORIGINAIS
+                </a>
+                <a href="">
+                    <i class="fas fa-film"></i>
+                    FILMES
+                </a>
+                <a href="">
+                    <i class="fas fa-tv"></i>
+                    SÉRIES
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="filme-principal">
+            <div class="owl-carousel owl-thema">
+                <button class="capa" id="capa1" onclick="abrirFilme('c1')">
+                    <img src="src/capa1.jpg" alt="capas" class="box-capas">
+                </button>
+                <button class="capa" id="capa2" onclick="abrirFilme('c2')">
+                    <img src="src/capa2.jpg" alt="capas" class="box-capas">
+                </button>
+                <button class="capa" id="capa3" onclick="abrirFilme('c3')">
+                    <img src="src/capa3.jpg" alt="capas" class="box-capas">
+                </button>
+                <button class="capa" id="capa4" onclick="abrirFilme('c4')">
+                    <img src="src/capa4.jpg" alt="capas" class="box-capas">
+                </button>
+                <button class="capa" id="capa5" onclick="abrirFilme('c5')">
+                    <img src="src/capa5.jpg" alt="capas" class="box-capas">
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <section class="outras-lines">
+        <p>RECOMENDOS</p>
+        <div class="owl-carousel owl-thema">
+            <button class="item" onclick="abrirFilme('m1')">
+                <img src="src/mini1.png" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m2')">
+                <img src="src/mini2.jpg" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m4')">
+                <img src="src/mini4.jpg" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m5')">
+                <img src="src/mini5.jpg" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m6')">
+                <img src="src/mini6.jpg" alt="outros capa">
+            </button>
+        </div>
+    </section>
+
+    <section class="outras-lines">
+        <p>CLÁSSICOS</p>
+        <div class="owl-carousel owl-thema">
+            <button class="item" onclick="abrirFilme('c3')">
+                <img src="src/capa3.jpg" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m7')">
+                <img src="src/mini7.jpg" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m8')">
+                <img src="src/mini8.jpg" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m9')">
+                <img src="src/mini9.jpg" alt="outros capa">
+            </button>
+            <button class="item" onclick="abrirFilme('m10')">
+                <img src="src/mini10.jpg" alt="outros capa">
+            </button>
+        </div>
+    </section>
+
+    <div class="pop-up">
+        <div class="container">
+            <div class="play"></div>
+            <button class="fecharpop" onclick="fecharPop()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!--Script Local para abrir links-->
+    <script src="js/a.js"></script>
+    <!--ícones no servidor da Font Awesone-->
+    <script src="https://kit.fontawesome.com/2e5fc028f4.js" crossorigin="anonymous"></script>
+    <!--Importando API OWL para execução dos carrosel-->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
+
+</body>
+</html>
